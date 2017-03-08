@@ -1,0 +1,19 @@
+This is a small tool that will pull all the users you are following on twitter
+and guess their gender. 
+
+It will respect he/him, she/her or they/them tags in a users description, if 
+no such data is available it will guess according to a dataset provided by the 
+OpenGenderTracking project. 
+
+Each user is assigned a value from 0.0 to 1.0, where 0 is female and 1.0 is male.
+
+If a user has specified their preferred pronouns in their description, this value
+is used. If not, the probability of their pronoun being either gender is used.
+
+This means that a user named Aamari will be scored as approximately 0.55, meaning
+slightly more likely to be male. 
+
+Once all users have been guessed, the scores are summarized and averaged. 
+
+This hopefully gives somewhat better data than simply picking male/female/neither 
+for each name.
